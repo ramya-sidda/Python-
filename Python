@@ -1,0 +1,35 @@
+A simple calculator in python 
+code:
+operator = input("Enter an operator (+ - * /): ")
+num1 = float(input("Enter the 1st number: "))
+num2 = float(input("Enter the 2nd number: "))
+
+if operator == "+":
+    result = num1 + num2
+elif operator == "-":
+    result = num1 - num2
+elif operator == "*":
+    result = num1 * num2
+elif operator == "/":
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Error! Division by zero."
+else:
+    result = "Invalid operator."
+
+print(result)
+
+*weight converter 
+code:
+weight = float(input("Enter your weight: "))
+unit = input("Kilograms or Pounds? (K or L): ")
+
+if unit.upper() == "K":
+    converted = weight * 2.205
+    print(f"Your weight is: {round(converted, 1)} Lbs")
+elif unit.upper() == "L":
+    converted = weight / 2.205
+    print(f"Your weight is: {round(converted, 1)} Kgs")
+else:
+    print("Invalid unit entered.")
